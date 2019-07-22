@@ -1,0 +1,55 @@
+.powerpage {
+	position: relative;
+	height: 800px;
+}
+
+.powercontainer {
+	position: absolute;
+	width: 1200px;
+	height: 480px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.powercontainer .item {
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	line-height: 225px;
+	border-radius: 50%;
+	animation: scaleitem 2s infinite;
+}
+
+.powercontainer .item:nth-of-type(even) {
+	background-color: rgba(252, 157, 154, 1);
+}
+
+.powercontainer .item:nth-of-type(odd) {
+	background-color: rgba(249, 205, 173, 1);
+}
+
+.powercontainer .item:hover {
+	transform: scale(1);
+}
+
+@keyframes scaleitem {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.95);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

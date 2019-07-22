@@ -1,0 +1,262 @@
+body {
+	background-color: #fff;
+}
+
+/* 父容器 */
+.container {
+	position: relative;
+	z-index: 2;
+	width: 80%;
+	height: 800px;
+	top: 70px;
+	margin: auto;
+	box-shadow: 0 0 0.78125rem;
+	border-radius: 1%;
+
+}
+
+/* 幻灯片容器 */
+.swiper-slide {
+	position: relative;
+	height: 800px;
+}
+
+/* 介绍盒子 */
+.introduxe-text {
+	position: absolute;
+	left: 50%;
+	margin-left: -241px;
+	margin-top: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 介绍项 */
+.introduxe-text>li {
+	display: block;
+	width: 500px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	border-radius: 10px 10px 10px 10px;
+}
+
+/* 分别设置每一个li的动画效果 */
+.introduxe-text>li:nth-of-type(1) {
+	background-color: rgba(174, 221, 129, 1);
+	animation: liscale 0.5s linear 0s;
+
+}
+
+.introduxe-text>li:nth-of-type(2) {
+	background-color: rgba(201, 186, 131, 1);
+	animation: liscale 0.8s linear;
+}
+
+.introduxe-text>li:nth-of-type(3) {
+	background-color: rgba(222, 211, 140, 1);
+	animation: liscale 1.1s linear;
+}
+
+.introduxe-text>li:nth-of-type(4) {
+	background-color: rgba(222, 156, 83, 1);
+	animation: liscale 1.4s linear;
+}
+
+.introduxe-text>li:nth-of-type(5) {
+	background-color: rgba(217, 104, 49, 1);
+	animation: liscale 1.7s linear;
+}
+
+/* 关键帧 */
+@-webkit-keyframes liscale {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+/* 图片容器位置设置 */
+.pageone>.img-container {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	height: 200px;
+	animation: liscale 0.4s linear;
+}
+
+/* 图片大小设置 */
+.pageone .img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+
+}
+
+/* 图片外圈旋转 */
+.pageone .before {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-top: -43px;
+	margin-left: -104px;
+	width: 206px;
+	height: 206px;
+	border-top: 1px solid red;
+	border-left: 1px solid red;
+	border-radius: 50%;
+	animation: img-border 2s linear 0.5s infinite;
+}
+
+.pageone .after {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-top: -48px;
+	margin-left: -108px;
+	width: 215px;
+	height: 215px;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
+	border-radius: 50%;
+	animation: img-border 2s linear 0.5s infinite reverse;
+}
+
+@-webkit-keyframes img-border {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* 第一页背景图片设置 */
+.beijing {
+	position: absolute;
+	width: 100%;
+	height: 800px;
+	border-radius: 1%;
+
+}
+
+/* 第二页 三页大小设置 */
+#power,
+#works {
+	/* 如果有问题 请把这个删除 第三页背景问题 */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* 第三页 */
+.pagethree-img {
+	position: absolute;
+	width: 100%;
+	height: 700px;
+	top: 50px;
+	/* #bdc3c7 → #2c3e50 */
+	background: linear-gradient(#bdc3c7, #2c3e50);
+}
+
+/* 第一页 */
+.pagenoe-img {
+	position: absolute;
+	width: 100%;
+	height: 700px;
+	top: 50px;
+	/* #4ca1af → #c4e0e5 */
+	background: linear-gradient(#c4e0e5, #4ca1af);
+}
+
+/* 第二页背景 */
+.pagetwo-img {
+	position: absolute;
+	width: 100%;
+	height: 700px;
+	top: 50px;
+	/* #43cea2 → #185a9d */
+	background: linear-gradient(#43cea2, #185a9d);
+}
+
+/* 第五页背景 */
+.pagefive-img {
+	position: absolute;
+	width: 100%;
+	height: 700px;
+	top: 50px;
+	/* #ed4264 → #ffedbc */
+	background: linear-gradient(#ffedbc, #ed4264);
+}
+
+/* 第四页 */
+.pagefour-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -340px;
+	width: 680px;
+	height: 500px;
+	/* border: 1px solid red; */
+	font-size: 20px;
+	text-indent: 40px;
+}
+
+.pagefour-text p {
+	margin-bottom: 10px;
+}
+
+/* 第四页背景 */
+.pagefour-img {
+	position: absolute;
+	width: 100%;
+	height: 700px;
+	top: 50px;
+	/* #ddd6f3 → #faaca8 */
+	background: linear-gradient(#ddd6f3, #faaca8);
+}
+
+/* 第五页 */
+.pagefive .wechat-img {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -240px;
+	margin-left: -150px;
+}
+
+.wechat-img img {
+	width: 300px;
+	height: 300px;
+}
+
+
+/* 标题 */
+.pagenoe-title,
+.pagetwo-title,
+.pagethree-title,
+.pagefour-title,
+.pagefive-title,
+.pagesix-title {
+	position: absolute;
+	width: 180px;
+	height: 100px;
+	left: 50%;
+	margin-left: -90px;
+	top: 68px;
+	color: white;
+	/* border: 1px solid red; */
+	font-size: 45px;
+	z-index: 5;
+}
